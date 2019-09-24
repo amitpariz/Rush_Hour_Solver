@@ -1,5 +1,5 @@
-                           Rush Hour - Final Project
-                           -------------------------
+Rush Hour - AI Final Project
+----------------------------
   
 Running the program
 -------------------
