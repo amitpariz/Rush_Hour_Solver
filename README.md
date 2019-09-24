@@ -5,14 +5,16 @@ Running the program
 -------------------
 
 "Games.py" is the main file, so to run the program, the following command needs to be executed (via the shell): "python Games.py",
-or alternatively, run Game.py in python IDE such as pycharm. Some input will be required:
+or alternatively, run Game.py in python IDE such as pycharm.
+Some input will be required:
+
 •	First, the difficulty of the game needs to be selected, by pressing 1 for easy, 2 for medium, 3 for hard.
 
 •	Then, the search algorithm needs to be selected, by pressing 1 for A* and 2 for IDA*
 
 •	Last, the heuristic needs to be selected, there are 9 difference heuristics and 
 	they are listed on screen for the user to choose from.
-	
+
 After the three parameters were selected, the AI solver prints the boards and the steps it chose on
 its way to the goal state (the solution).
 
