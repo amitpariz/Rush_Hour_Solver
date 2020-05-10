@@ -23,8 +23,6 @@ ALGORITHM = {"1": astar, "2": ida}
 def parse_file(rushhour_file):
     """
     this function parses the rush hour game
-    :param rushhour_file:
-    :return:
     """
     file = open(rushhour_file)
     vehicles_list = []
@@ -112,13 +110,6 @@ def calculate_results_to_csv(level, index):
 
 
 def solve_game_and_print(fileName, algorithm, heuristic):
-    """
-
-    :param fileName:
-    :param algorithm:
-    :param heuristic:
-    :return:
-    """
     path = "cards/" + fileName
     vehicles_list = parse_file(path)
     rushHour = RushHourSearch(vehicles_list)
