@@ -267,7 +267,7 @@ def general_search(problem, type):
     fringe.push((problem.get_start_state(), None, 1))
     # moves dictionary is a dictionary for each board to its father and the cost of the action
     moves_dict[problem.get_start_state()] = (None, None, 1)
-    while not fringe.isEmpty():
+    while not fringe.is_empty():
         current_board, current_move, current_cost = fringe.pop()
         if problem.is_goal_state(current_board):
             return get_path(moves_dict, current_board)
@@ -318,7 +318,7 @@ def a_star_search(problem, heuristic=null_heuristic):
     fringe.push(item, 0)
     # moves dictionary is a dictionary for each board to its father and the cost of the action
     moves_dict[problem.get_start_state()] = (None, None, 0)
-    while not fringe.isEmpty():
+    while not fringe.is_empty():
         current_board, current_move, current_cost = fringe.pop().data
         if problem.is_goal_state(current_board):
             return get_path(moves_dict, current_board)
@@ -344,7 +344,6 @@ def ida_star(problem, heuristic=null_heuristic):
     """
     limit = heuristic(problem.get_start_state())
     counter = 0
-    # todo: check counter
     while counter < 100000000:
         backtrace, limit, is_goal_state_flag = ida_star_helper(problem, heuristic, limit)
         if is_goal_state_flag:
@@ -365,7 +364,7 @@ def ida_star_helper(problem, heuristic=null_heuristic, limit=0):
     # moves dictionary is a dictionary for each board to its father and the cost of the action
     moves_dict[problem.get_start_state()] = (None, None, 0)
     new_limit = float('inf')
-    while not fringe.isEmpty():
+    while not fringe.is_empty():
         current_board, current_move, current_cost = fringe.pop().data
         is_goal_state_flag = problem.is_goal_state(current_board)
         if is_goal_state_flag or current_cost > limit:
